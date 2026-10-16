@@ -1,0 +1,11 @@
+{
+  "name": "narmadamotors",
+  "compatibility_date": "2026-10-16",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

@@ -18,18 +18,11 @@ npm run preview
 
 `build` writes a static site to `dist`. `preview` serves that build locally.
 
-## Cloudflare Pages
+## Cloudflare
 
-Connect the GitHub repo. In the Pages project use:
+The Worker deploy uses `wrangler.jsonc`. Build command: `npm run build`. Deploy command: `npx wrangler deploy`. Output directory: `dist`. Node.js version: 22.
 
-| Setting | Value |
-| --- | --- |
-| Framework preset | Vite |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Node.js version | 22 |
-
-The site is a single-page app. `public/_redirects` is copied into `dist` so a refresh on `/products`, `/contact`, or any other route still serves `index.html`. Node 22 is set in `.node-version` because this Vite version needs Node 20.19 or newer.
+Unknown routes such as `/products` serve `index.html` through `assets.not_found_handling`. Do not add a `/* /index.html` rule in `public/_redirects`; Cloudflare treats that as a redirect loop.
 
 ## Swap the WhatsApp number
 
