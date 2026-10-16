@@ -18,6 +18,19 @@ npm run preview
 
 `build` writes a static site to `dist`. `preview` serves that build locally.
 
+## Cloudflare Pages
+
+Connect the GitHub repo. In the Pages project use:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Vite |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node.js version | 22 |
+
+The site is a single-page app. `public/_redirects` is copied into `dist` so a refresh on `/products`, `/contact`, or any other route still serves `index.html`. Node 22 is set in `.node-version` because this Vite version needs Node 20.19 or newer.
+
 ## Swap the WhatsApp number
 
 Edit `src/config.js`.
