@@ -47,31 +47,31 @@ export default function Home() {
 
       <section className="relative bg-navy">
         <div className="absolute inset-0 overflow-hidden">
-          <Photo image={images.hero} eager className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/88 to-navy/45" />
+          <Photo image={images.hero} eager className="h-full w-full object-cover object-center" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-navy via-navy/80 to-transparent" />
         </div>
-        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-7.5rem)] max-w-6xl flex-col justify-center px-4 py-16 sm:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-7.5rem)] max-w-6xl flex-col px-4 pt-8 pb-28">
           <p className="text-xs font-semibold tracking-[0.22em] text-orange uppercase">
             Patna · Since {config.established}
           </p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-6xl">
+          <h1 className="mt-3 max-w-4xl text-3xl font-semibold leading-[1.15] text-white drop-shadow-md sm:mt-4 sm:text-6xl sm:leading-tight">
             Genuine Spare Parts for Trucks, Tippers & Heavy Machinery
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/80">
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-white drop-shadow-md sm:mt-5 sm:text-lg">
             Wholesale supply for fleets and contractors, and export packing for buyers overseas. Tell us the brand, model or part number.
           </p>
-          <div className="mt-8 max-w-3xl">
+          <div className="mt-auto max-w-3xl pt-8">
             <SearchBar />
           </div>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <Link to="/contact" className="inline-flex items-center justify-center rounded-xl bg-orange px-6 py-3 font-semibold text-white hover:bg-orange-dark">
+          <div className="mt-3 grid grid-cols-2 gap-3 sm:mt-5 sm:flex">
+            <Link to="/contact" className="inline-flex items-center justify-center rounded-xl bg-orange px-3 py-3 text-center text-sm font-semibold text-white hover:bg-orange-dark sm:px-6 sm:text-base">
               Request a Quote
             </Link>
             <a
               href={whatsappUrl(config.defaultWhatsAppText)}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-navy hover:bg-mist"
+              className="inline-flex items-center justify-center rounded-xl bg-white px-3 py-3 text-center text-sm font-semibold text-navy hover:bg-mist sm:px-6 sm:text-base"
             >
               Chat on WhatsApp
             </a>
